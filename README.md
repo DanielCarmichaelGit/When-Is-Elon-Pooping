@@ -3,3 +3,6 @@ A JS, HTML, and CSS project that uses algorithms and APIs to take a guess at the
 
 
 I'm a little teapot, short and stout.
+
+
+Once upon a time, mr. squiggly got covered in pink little hairs, just a wiggling all about.
