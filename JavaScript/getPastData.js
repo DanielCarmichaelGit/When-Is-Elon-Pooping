@@ -19,7 +19,7 @@ const getUserTweets = async () => {
 
     // we request the author_id expansion so that we can print out the user name later
     let params = {
-        "max_results": 10,
+        "max_results": 100,
         "tweet.fields": "created_at",
         "expansions": "author_id",
         'exclude': 'replies'
@@ -54,11 +54,13 @@ const getUserTweets = async () => {
         }
     }
 
-     console.dir(userTweets, {
+     return userTweets; 
+     /*
+     (userTweets, {
         depth: null
     });
     console.log(`Got ${userTweets.length} Tweets from ${userName} (user ID ${userId})!`);
-
+    */
 }
 
 const getPage = async (params, options, nextToken) => {
@@ -78,5 +80,16 @@ const getPage = async (params, options, nextToken) => {
         throw new Error(`Request failed: ${err}`);
     }
 }
+let data = [];
 
-var data = getUserTweets();
+getUserTweets().then(value => {
+    data = value.map(tweet => tweet.created_at);
+    console.log(data);
+    console.log(data.length);
+});
+
+//setTimeout(() => {
+//    console.log(data)
+//}, 30000);
+    /*.then(value => {data=value})
+.finally(() => {console.log(data)});*/
