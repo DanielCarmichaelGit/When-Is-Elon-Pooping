@@ -84,8 +84,11 @@ let data = [];
 
 getUserTweets().then(value => {
     data = value.map(tweet => tweet.created_at);
-    console.log(data);
-    console.log(data.length);
+
+    fs.writeFile('ElonData.txt', data.join("\n"), (err) => {
+        // In case of a error throw err.
+        if (err) throw err;
+    })
 });
 
 //setTimeout(() => {
