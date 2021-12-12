@@ -4,14 +4,20 @@
     margin: 0;
 }
 
+body {
+    width: 100%;
+    background-color: rgb(53, 53, 53);
+}
+
 header {
+    background-color: white;
     width: 100%;
     text-align: center;
 }
 
 header > h1 {
     font-size: 6em;
-    padding: 70px;
+    padding: 50px 70px 70px 70px;
 }
 
 header > img {
@@ -20,13 +26,18 @@ header > img {
     animation-name: slideout;
 }
 
-/* Disabled while developing */ 
+/* Disabled while developing  
 @keyframes slideout {
     0% {width: 600px; opacity: 0;}
     30% {width: 600px; opacity: 1;}
     100% {width: 200px;}
 }
 */
+
+main {
+    background-color: white;
+    height: 100%;
+}
 
 section {
     display: flex;
@@ -37,6 +48,7 @@ section {
 article {
     background-image: linear-gradient(white, rgb(243, 243, 243));
     margin-top: 50px;
+    padding-bottom: 20px;
     display: flex;
     width: 100%;
     flex-wrap: wrap-reverse;
@@ -48,9 +60,17 @@ article > p {
     font-size: 1.4em;
     line-height: 1.5;
     margin: 40px;
-    max-width: 600px;
+    padding-bottom: 30px;
+    max-width: 770px;
+    min-width: 600px;
     align-self: center;
     text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+    article > p {
+        max-width: 600px;
+    }
 }
 
 figure {
@@ -62,4 +82,17 @@ figure {
 
 figcaption {
     font-size: 12px;
+}
+
+footer {    
+    background-color: rgb(53, 53, 53);
+    border-width: 1px;
+    border-style: solid hidden hidden hidden;
+    border-color: rgb(0, 0, 0);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.2em;
+    color:honeydew;
+    text-align: center;
+    width: 100%;
 }
