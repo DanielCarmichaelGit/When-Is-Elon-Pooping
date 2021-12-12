@@ -1,5 +1,6 @@
 const fs = require('fs')
 
+var count = 0
 var dataArray = [];
 
 try {
@@ -10,4 +11,5 @@ catch (err) {
     console.error(err)
 }
 
-console.log(dataArray)
+dataArray = dataArray.map(e => e.replace(".000Z", "").split("T"));
+console.log(dataArray);
