@@ -13,3 +13,5 @@ catch (err) {
 
 dataArray = dataArray.map(e => e.replace(".000Z", "").split("T"));
 console.log(dataArray);
+
+tuesday
