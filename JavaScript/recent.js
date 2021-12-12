@@ -11,7 +11,14 @@ const needle = require('needle');
 const token = 'AAAAAAAAAAAAAAAAAAAAAHVSWwEAAAAAOn%2FFskPge8QQHXr3bnUS8BvpFQY%3DIL7o0vYJHC3sFQtBHnJqkSVwMoiEBtmJdFRZnrNyuNf0y4RUfF';
 
 var arr = [];
-var last = [];
+var response = [];
+const params = {
+    'query': 'from:elonmusk',
+    'max_results': 10,
+    'tweet.fields': 'author_id',
+    'tweet.fields': 'created_at'
+}
+
 
 const endpointUrl = "https://api.twitter.com/2/tweets/search/recent";
 
@@ -21,13 +28,6 @@ async function getRequest() {
     // Edit query parameters below
     // specify a search query, and any additional fields that are required
     // by default, only the Tweet ID and text fields are returned
-    const params = {
-        'query': 'from:elonmusk',
-        'max_results': 10,
-        'tweet.fields': 'author_id',
-        'tweet.fields': 'created_at',
-        //'start_time': arr[arr.length - 1]?.[10] ?? '2021-12-10T23:33:50.000Z'
-    }
 
     const res = await needle('get', endpointUrl, params, {
         headers: {
@@ -43,28 +43,55 @@ async function getRequest() {
     }
 }
 
-for (let i = 0; i < 5; i++) {
-    setTimeout(() => {
-        (async () => {
-            try {
-                // Make request
-                const response = await getRequest();
-                last = response.data.map(data => data.created_at);
-                return last
-            } catch (e) {
-                console.log(e);
-                process.exit(-1);
-            }
-            process.exit();
-        })();
-        setTimeout(() => {arr.push(last)}, 1000);
-    }, 1000);
+
+function changeToken(lastToken) {
 
 }
 
-//console.log(arr)
-setTimeout(() => {console.log(arr)}, 10000);
 
+const loopy = (counter) => {
+      if (counter === 0) {
+        return 0;
+      }
+      (async () => {
+        try {
+          return await getRequest();
+        } catch (e) {
+          console.log(e);
+          process.exit(-1);
+        }
+        process.exit();
+      })()
+        .then((value) => {
+          arr.push(value);
+          params.next_token = value.meta.next_token;
+          loopy(counter - 1);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+};
+loopy(5);
+
+
+setTimeout(() => {
+    arr.forEach(obj => {
+        obj.data.forEach(obj2 => {
+            console.log(obj2.created_at)
+        });
+    });
+}, 3000);
+
+/*
+setTimeout(() => {
+    arr.forEach(value => {
+        //value.forEach(value2 => {console.log(value2.created_at)});
+        //console.log(params.max);
+        //console.log(value.meta.next_token);
+
+    });
+}, 5000);
+*/
 
 
 
