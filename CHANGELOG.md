@@ -13,7 +13,8 @@ Template for noting changes below, most recent at top
 ## [0.1.1] - 2021-12-14
  
 ### Added
-- Finished adding files from Brandon's branch to main, Brandon's branch will be deleted upon second inspection.
+- Finished adding files from Brandon's branch to main
+- Removed Brandon's branch
 ### Changed
 -  
 ### Fixed
