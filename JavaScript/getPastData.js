@@ -22,7 +22,7 @@ const getUserTweets = async () => {
         "max_results": 100,
         "tweet.fields": "created_at",
         "expansions": "author_id",
-        'exclude': 'replies'
+        'exclude': 'replies,retweets'
     }
 
     const options = {
