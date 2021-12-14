@@ -1,6 +1,6 @@
 # Change Log
  
-Template for noting changes below
+Template for noting changes below, most recent at top
 ## [Unreleased] - yyyy-mm-dd 
  
 ### Added
