@@ -8,12 +8,12 @@ const ElonDataArray = fs
 
 // Generate data for line charting, write to file "lineChartData.js"
 //console.log(createLineChartString(ElonDataArray));
-//fs.writeFileSync('lineChartData.js', hoursString);
+//fs.writeFileSync('JavaScript/lineChartData.js', createLineChartString(ElonDataArray));
 
 
 // Generate data for scatter plot timeline, write to file "scatterPlotDataUTC-6.js"
 //console.log(createScatterPlotString(ElonDataArray));
-//fs.writeFileSync('scatterPlotDataUTC-6.js', createScatterPlotString(ElonDataArray));
+//fs.writeFileSync('JavaScript/scatterPlotDataUTC-6.js', createScatterPlotString(ElonDataArray));
 
 
 function createLineChartString(dateAndTime) {
