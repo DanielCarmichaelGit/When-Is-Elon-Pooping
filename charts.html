@@ -48,8 +48,8 @@
             id="scatterChart"
             style="width: 100%; max-width: 700px"
           ></canvas>
-          <script src="./scatterPlotDataUTC-6.js"></script>
-          <script src="./scatterPlotChart.js"></script>
+          <script src="./JavaScript/scatterPlotDataUTC-6.js"></script>
+          <script src="./JavaScript/scatterPlotChart.js"></script>
         </article>
         <article
           style="
@@ -66,7 +66,7 @@
             id="lineChart"
             style="width: 100%; max-width: 700px; padding-bottom: 40px"
           ></canvas>
-          <script src="./lineChartData.js"></script>
+          <script src="./JavaScript/lineChartData.js"></script>
           <script>
             var xValues = [
               "12:00 a.m.",
@@ -96,8 +96,8 @@
             ];
             var yValues = lineChartData;
             //var yValues = [20, 25, 13, 19, 19, 19, 15, 21, 24, 24, 25, 22, 33, 32, 21, 23, 23, 12, 15, 21, 34, 31, 17];
-            const image = new Image(40, 40);
-            image.src = "https://www.pngfind.com/pngs/m/40-400584_baby-poop-emoji-poop-emoji-hd-png-download.png";
+            //const image = new Image(40, 40);
+            //image.src = "https://www.pngfind.com/pngs/m/40-400584_baby-poop-emoji-poop-emoji-hd-png-download.png";
             new Chart("lineChart", {
               type: "line",
               data: {
@@ -117,7 +117,7 @@
               options: {
                 legend: { display: false },
                 scales: {
-                  yAxes: [{ ticks: { min: 0, max: 50 } }],
+                  yAxes: [{ ticks: { min: 0, max: 45 } }],
                 },
                 tooltips: {
                     enabled: true,
