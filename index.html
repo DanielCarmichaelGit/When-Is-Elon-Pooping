@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>When is Elon Pooping</title>
-    <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
   <body>
     <div id="wrapper">
@@ -46,15 +47,28 @@
             </p>
           </article>
         </section>
-        
+        <section>
+          <canvas 
+            id="bubble-chart"
+            style="width: 100%; max-width: 700px; padding-bottome: 40px;"
+          ></canvas>
+          <script src="./JavaScript/bubbleConfig.js"></script>
+        </section>  
+        <section>
+          <div style="position: absolute; top: 1100px; left: 500px; transform: rotate(0.75turn);">TOTAL TWEETS IN 2021</div>
+          <h2>Total Tweets Per Hour in 2021</h2>
+          <p>(rounded down to nearest hour)</p>
+          <canvas
+            id="lineChart"
+            style="width: 100%; max-width: 700px; padding-bottom: 40px"
+          ></canvas>
+          <script src="./JavaScript/lineChartData.js"></script>
+          <script src="./JavaScript/lineChartConfig.js"></script>
+        </section>
         <section>
           <a class="twitter-timeline" href="https://twitter.com/elonmusk" data-tweet-limit="1" data-width="399" ></a>
           <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </section>
-      
-        <!-- Not ready for prime time yet
-             <script src="index.js"></script> 
-        -->
       </main>
     </div>
     <footer>Created by Daniel Carmicheal & Brandon Mikowski</footer>
