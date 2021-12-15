@@ -38,7 +38,8 @@ new Chart("lineChart", {
         backgroundColor: "rgba(255,255,255,1.0)",
         borderColor: "rgba(0,0,0,1)",
         data: yValues,
-        //pointStyle: ;
+        pointHoverRadius: 15,
+        //pointStyle: ,
       },
     ],
   },
