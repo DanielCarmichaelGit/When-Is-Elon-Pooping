@@ -48,27 +48,82 @@
           </article>
         </section>
         <section>
-          <canvas 
+          <article class="gradient">
+            <p style="text-align: center;">
+          To help us solve this question, we had to gather data, <strong>lots of it.</strong>
+            </p>
+          <figure style="position: relative">
+            <p style="position: absolute; transform: rotate(0.75turn); top: 40%; right: 86%; min-width: 30%">HOUR OF TWEET</p>
+            <p style="position: absolute; top: 90%; right: 35%; min-width: 30%">DAYS INTO YEAR</p>
+            <p style="position: absolute; top: -3%; right: 35%; min-width: 30%">EVERY TWEET ELON MADE IN 2021</p>
+            <canvas 
             id="bubble-chart"
-            style="width: 100%; max-width: 700px; padding-bottome: 40px;"
           ></canvas>
+          <script src="./JavaScript/bubbleChartData.js"></script>
           <script src="./JavaScript/bubbleConfig.js"></script>
+        <figcaption style="visibility: hidden">All of Elon's tweets in 2021</figcaption>
+        </figure>
+        <p>
+          This "bubble chart" shows every tweet Elon has made in 2021. (Retweets & replies not included)
+          <br><br>
+          Left to right is every day of the year so far and top to bottom is every hour of the day.
+          <br><br>
+          The bigger the circle, the more tweets that were made within the same hour.
+          <br><br>
+          Notice the lack of activity between 5:00 a.m. and Noon, and the clusters of activity in the afternoon.
+          <br><br>
+          We started seeing <strong>patterns...</strong> But what did it all mean?
+          <br><br>
+        </p>  
+        </article>
         </section>  
         <section>
-          <div style="position: absolute; top: 1100px; left: 500px; transform: rotate(0.75turn);">TOTAL TWEETS IN 2021</div>
-          <h2>Total Tweets Per Hour in 2021</h2>
-          <p>(rounded down to nearest hour)</p>
+          <article class="gradient">
+          <p>It is said that the average person poops about 
+            <a href="https://www.healthline.com/health/american-gut-check#Toilet-consensus-">once a day</a>, in the morning or in the afternoon.
+            <br><br>
+            To apply this knowledge to Elon's tweet habits, we needed a different perspective.
+            </p>
+          <figure style="position: relative;">
+            <p style="position: absolute; transform: rotate(0.75turn); top: 40%; right: 86%; min-width: 30%">TOTAL NUMBER OF TWEETS</p>
+            <p style="position: absolute; top: 90%; right: 35%; min-width: 30%">TIME OF DAY</p>
+            <p style="position: absolute; top: -3%; right: 35%; min-width: 30%">HOURLY TWEET TOTALS FOR 2021</p>
           <canvas
             id="lineChart"
-            style="width: 100%; max-width: 700px; padding-bottom: 40px"
           ></canvas>
           <script src="./JavaScript/lineChartData.js"></script>
           <script src="./JavaScript/lineChartConfig.js"></script>
+        </figure>
+        <p>
+          Here we have Elon's total tweet count for every hour of 2021.
+          <br><br>
+          Now the <strong>mountains</strong> and <strong>valleys</strong> really start to stand out.
+          <br><br>
+          <strong class="stronger">So what does it all mean?</strong><br><br>
+          It means Elon is likely an afternoon dumper. Lets walk through his day:
+        </p>
+          <ul>
+            <li>7:00am - <a href="https://finty.com/us/daily-routines/elon-musk/">Wake up</a></li>
+            <li>7:00am - 12:00pm - Elon is likely working hard, putting in the crucial morning hours with his undivided attention</li>
+            <li>12:00pm - 4:00pm - This is our magic <b>HIGH</b> tweet frequency, afternoon dump window</li>
+            <li>4:00pm - 12:00am - More work, settling down into the evening as night approaches</li>
+            <li>12:00am - 4:00am - This is the second highest spike period, our guess is that during many nights, Elon is working overtime and likely sending out "i'm too tired to think straight" tweets</li>
+            <li>4:00am - 7:00am - Sleep... Mostly</li>
+          </ul>
+        </article>
         </section>
         <section>
-          <a class="twitter-timeline" href="https://twitter.com/elonmusk" data-tweet-limit="1" data-width="399" ></a>
-          <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <article class="gradient">
+            <p style="text-align: center"><strong>CONCLUSION:</strong></p>
+            <p>Elon tweets at many different times, but if you see him tweet between 2-4pm,<br>Elon is pooping.</p>
+            <figure>
+             <a class="twitter-timeline" href="https://twitter.com/elonmusk" data-tweet-limit="1" data-width="399" ></a>
+             <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <figcaption>Elon's most recent tweet</figcaption>
+            </figure>    
+        </article>
         </section>
+        
       </main>
     </div>
     <footer>Created by Daniel Carmicheal & Brandon Mikowski</footer>
