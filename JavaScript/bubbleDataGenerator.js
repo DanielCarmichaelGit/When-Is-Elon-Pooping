@@ -59,7 +59,7 @@ chartArray = chartArray.reverse();
 const counts = {};
 chartArray.forEach(function (e) { counts[e] = (counts[e] || 0) + 1; });
 
-var str = "'[";
+var str = "[";
 
 for (let item in counts) {
   var slot = {};
@@ -73,7 +73,8 @@ for (let item in counts) {
   //slot.r = Math.ceil(counts[item] * 3)
   //chartData.push(slot)
 }
-str = str + "]'"
+
+str = 'var bubbleChartData = ' + str + "];"
 
 
 
