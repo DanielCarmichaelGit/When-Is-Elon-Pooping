@@ -1,6 +1,5 @@
 const fs = require("fs")
 
-
 // open file of pulled data and split it by line
 try {
   const file = fs.readFileSync('ElonData.txt', 'utf8')
@@ -10,10 +9,11 @@ catch (err) {
   console.error(err)
 }
 
-
+// initialize empty array
 var chartArray = [];
-var chartData = [];
 
+
+// converts dat to day of year beginning at jan 1
 function dayOfYear(date) {
   let daysInMonth = [0, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   let year = parseInt(date.substring(0, 4));
@@ -34,8 +34,8 @@ function dayOfYear(date) {
   return day;
 }
 
+// manipulates data to get x and y into chartArray for each item data (ElonData.txt)
 for (const item of data) {
-  var slot = {};
   var array = item.split(" ");
   var y = array[0];
   var timeArray = array[1].split(":").map(e => parseInt(e));
@@ -54,25 +54,33 @@ for (const item of data) {
 
   chartArray.push([x,y]);
 }
+// reverses array to have ascending days
 chartArray = chartArray.reverse();
 
+// counts repetitive x and y in chartArray
 const counts = {};
 chartArray.forEach(function (e) { counts[e] = (counts[e] || 0) + 1; });
 
+
+// initializes a string equaling '[
 var str = "'[";
 
 for (let item in counts) {
-  var slot = {};
+  // var slot = {};
   var current = "{"
   item = item.toString().split(",")
   current = current + " x: " + dayOfYear(item[1]) + ", y: " + item[0] + ", r: " + (counts[item] * 5) + "}, \n"
   str = str + current
+
+  // the functionality used for automating new bubble chart data
   //slot.x = item[0]
   //slot.x = parseInt(slot.x)
   //slot.y = dayOfYear(item[1])
   //slot.r = Math.ceil(counts[item] * 3)
   //chartData.push(slot)
 }
+
+// encapsulates the existing str with a bracket and a single quote
 str = str + "]'"
 
 
