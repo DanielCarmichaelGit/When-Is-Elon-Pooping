@@ -20,6 +20,14 @@ new Chart(document.getElementById("bubble-chart"), {
     options: {
         legend: {
             display: false,
-        }
+        },
+        tooltips: {
+            callbacks: {
+               label: function(t, d) {
+                  return d.datasets[t.datasetIndex].label + 
+                         ': (Day:' + t.xLabel + ', Hour:' + t.yLabel + ', Tweet Count:' + (t.r/5) + ')';
+               }
+            }
+         }
     }
 });
