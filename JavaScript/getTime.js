@@ -10,8 +10,8 @@ function calculate() {
         response = "might poop here pretty soon..."
     }
     else {
-        response = "isn't pooping for a little while :^("
+        response = "isn't gonna poop for a little while :/"
     }
 
-    document.getElementById("isHePooping").innerHTML = "Elon Musk =" + response;
+    document.getElementById("isHePooping").innerHTML = "Elon " + response;
 }
