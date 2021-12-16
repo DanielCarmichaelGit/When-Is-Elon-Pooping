@@ -2,11 +2,7 @@
 <html>
   <head>
     <title>When is Elon Pooping</title>
-    <!-- New Change -->
-    <p id="isHePooping">Getting the current time..</p>
-    <button onclick="calculate()">Is Elon Pooping Rigtt Now?!</button>
-    <script src="JavaScript/getTime.js"></script>
-    <!-- New Change -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
@@ -119,13 +115,21 @@
         </section>
         <section>
           <article class="gradient">
+
             <p style="text-align: center"><strong>CONCLUSION:</strong></p>
             <p>Elon tweets at many different times, but if you see him tweet between 2-4pm,<br>Elon is pooping.</p>
+            <div class="littleWrap">
+            <!-- Is Elon Pooping Button -->
+            <p id="isHePooping"></p>
+            <script src="JavaScript/getTime.js"></script>
+            <a href="javascript:calculate()" class="button1">Is Elon Pooping Right Now?!</a>
+            <!-- Is Elon Pooping Button -->
             <figure>
              <a class="twitter-timeline" href="https://twitter.com/elonmusk" data-tweet-limit="1" data-width="399" ></a>
              <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <figcaption>Elon's most recent tweet</figcaption>
             </figure>    
+            </div>
         </article>
         </section>
         
