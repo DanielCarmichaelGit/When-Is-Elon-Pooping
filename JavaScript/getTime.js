@@ -1,12 +1,11 @@
 function calculate() {
     const now = new Date();
-    var hours = now.getUTCHours()
-    //hours = parseInt(hours)
+    var hours = parseInt(now.getUTCHours()-6, 10);
     var response = ""
-    if (parseInt(hours) - 6 >= 14 && parseInt(hours) - 6 <= 16) {
+    if (hours > 13 && hours < 16) {
         response = "is probably pooping!!!"
     }
-    else if (parseInt(hours) >= 13 && parseInt(hours) < 14) {
+    else if (hours === 13) {
         response = "might poop here pretty soon..."
     }
     else {
@@ -15,3 +14,4 @@ function calculate() {
 
     document.getElementById("isHePooping").innerHTML = "Elon " + response;
 }
+calculate();
