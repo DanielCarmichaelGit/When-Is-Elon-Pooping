@@ -1,3 +1,6 @@
+TwitterAPIKeys.txt
+package.json
+package-lock.json
 node_modules/.bin/needle
 node_modules/.bin/needle.cmd
 node_modules/.bin/needle.ps1
