@@ -3,10 +3,10 @@ function calculate() {
     var hours = now.getUTCHours()
     //hours = parseInt(hours)
     var response = ""
-    if (parseInt(hours) - 6 >= 2 && parseInt(hours) - 6 <= 4) {
+    if (parseInt(hours) - 6 >= 14 && parseInt(hours) - 6 <= 16) {
         response = "is probably pooping!!!"
     }
-    else if (parseInt(hours) >= 1 && parseInt(hours) < 2) {
+    else if (parseInt(hours) >= 13 && parseInt(hours) < 14) {
         response = "might poop here pretty soon..."
     }
     else {
