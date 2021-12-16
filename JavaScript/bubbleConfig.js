@@ -26,7 +26,7 @@ new Chart(document.getElementById("bubble-chart"), {
                label: function(t, d,) {
                 var rValue = d.datasets[t.datasetIndex].data[t.index].r;
                   return d.datasets[t.datasetIndex].label +
-                         ': (Day:' + t.xLabel + ', Hour:' + t.yLabel + ', Tweet Count:' + (rValue/5) + ')';
+                         ': (Day: ' + t.xLabel + ', Hour: ' + t.yLabel + ', Tweet Count: ' + (rValue/5) + ')';
                }
             }
          }
