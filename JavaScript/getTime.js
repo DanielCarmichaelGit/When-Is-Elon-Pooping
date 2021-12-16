@@ -3,7 +3,7 @@ function calculate() {
     var hours = now.getUTCHours()
     //hours = parseInt(hours)
     var response = ""
-    if (parseInt(hours) >= 2 && parseInt(hours) <= 4) {
+    if (parseInt(hours) - 6 >= 2 && parseInt(hours) - 6 <= 4) {
         response = "is probably pooping!!!"
     }
     else if (parseInt(hours) >= 1 && parseInt(hours) < 2) {
