@@ -1,8 +1,10 @@
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 body {
@@ -31,7 +33,6 @@ header > img {
   animation-name: slideout;
 }
 
-/* Disabled while developing  
 @keyframes slideout {
   0% {
     width: 600px;
@@ -45,7 +46,7 @@ header > img {
     width: 200px;
   }
 }
-*/ 
+ 
 main {
   background-color: white;
   height: 100%;
@@ -68,21 +69,23 @@ article {
   text-align: center;
 }
 
+article.gradient {
+  background-image: linear-gradient(rgb(243, 243, 243), white, rgb(243, 243, 243));
+  border-top:black 1px solid;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 article > p {
-  font-size: 1.4em;
+  font-size: 2.4em;
   line-height: 1.5;
   margin: 40px;
   padding-bottom: 30px;
   max-width: 770px;
   min-width: 600px;
+  width: 100%;
   align-self: center;
   text-align: left;
-}
-
-@media screen and (min-width: 1200px) {
-  article > p {
-    max-width: 600px;
-  }
 }
 
 figure {
@@ -121,4 +124,48 @@ footer {
   color: honeydew;
   text-align: center;
   width: 100%;
+}
+
+canvas {
+  width: 100%; 
+  max-width: 700px; 
+  padding-bottom: 40px;
+}
+
+.stronger {
+  font-size: 1.5em;
+}
+
+ul, li {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 0px;
+  padding-bottom: 0px;
+  max-width: 770px;
+  min-width: 600px;
+  align-self: center;
+  text-align: left;
+}
+
+@media screen and (min-width: 992px) {
+  article > p {
+    font-size: 1.6em;
+    max-width: 600px;
+  }
+
+  canvas {
+    min-width: 58em;
+    min-height: 29em;
+  }
+
+  article.gradient > p {
+    max-width: 55%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  canvas {
+    min-width: 66em;
+    min-height: 33em;
+  }
 }

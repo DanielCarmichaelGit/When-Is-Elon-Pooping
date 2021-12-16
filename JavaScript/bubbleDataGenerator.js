@@ -61,9 +61,7 @@ chartArray = chartArray.reverse();
 const counts = {};
 chartArray.forEach(function (e) { counts[e] = (counts[e] || 0) + 1; });
 
-
-// initializes a string equaling '[
-var str = "'[";
+var str = "[";
 
 for (let item in counts) {
   // var slot = {};
@@ -80,8 +78,7 @@ for (let item in counts) {
   //chartData.push(slot)
 }
 
-// encapsulates the existing str with a bracket and a single quote
-str = str + "]'"
+str = 'var bubbleChartData = ' + str + "];"
 
 
 
