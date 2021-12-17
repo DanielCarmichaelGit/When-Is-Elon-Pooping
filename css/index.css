@@ -124,6 +124,8 @@ footer {
   color: honeydew;
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 canvas {
@@ -173,6 +175,13 @@ a.button1:hover{
   background-color:#000000;
 }
 
+footer a {
+  color: white;
+  transition: .5s;
+}
+footer a:hover {
+  color: yellow;
+}
 
 @media screen and (min-width: 992px) {
   article > p {
