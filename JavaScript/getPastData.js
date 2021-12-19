@@ -13,7 +13,7 @@ const url = `https://api.twitter.com/2/users/${userId}/tweets`;
 // To set environment variables on macOS or Linux, run the export command below from the terminal:
 // export BEARER_TOKEN='YOUR-TOKEN'
 // bearerToken = process.env.BEARER_TOKEN
-const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAHVSWwEAAAAAOn%2FFskPge8QQHXr3bnUS8BvpFQY%3DIL7o0vYJHC3sFQtBHnJqkSVwMoiEBtmJdFRZnrNyuNf0y4RUfF';
+const bearerToken = ;
 
 const getUserTweets = async () => {
     let userTweets = [];
